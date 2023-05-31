@@ -14,11 +14,13 @@ while(remain_coffee >= 0):
     print("자판기 거스름 돈 여유분", remain_money)
     print("커피 남은 개수", remain_coffee)
     print("=" * 30)
+    print("")
+    print("")
 
     user_input_money = int(input("돈을 넣으세요. : "))
     user_want_count = int(input("커피 개수를 입력하세요.: "))
 
-    
+
 
     if user_input_money < 300:
         print("당신은 한개도 못삽니다. 돌아가세요.")
@@ -34,9 +36,10 @@ while(remain_coffee >= 0):
         real_user_receive += 1
         user_want_count -=1
         remain_coffee -= 1
-        return_money = user_input_money - (300 * real_user_receive)
+
 
         if remain_coffee == 0:
+            return_money = user_input_money - (300 * real_user_receive)
             print("%d 개의 커피를 드립니다. 거스름 돈은 %d 원 입니다." % (real_user_receive, return_money))
             print("커피가 다 떨어졌습니다. 판매를 중지 합니다.")
             break
